@@ -6,26 +6,6 @@ const Box = posed.div({
   hidden: { opacity: 0 },
   visible: { opacity: 1 }
 });
-const ItemLi = posed.li({
-  flip: {
-    scale: 1,
-    transition: {
-      scale: {
-        type: "spring",
-        velocity: 10
-      },
-      default: {
-        type: "spring"
-      }
-    }
-  }
-});
-
-const widthHeight = {
-  width: window.innerWidth / 3.2,
-  height: window.innerHeight / 3.2
-};
-
 class App extends Component {
   state = { items: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] };
   componentDidMount() {
@@ -33,9 +13,10 @@ class App extends Component {
       this.setState({
         items: shuffle(this.state.items)
       });
-    }, 3000);
+    }, 30000);
   }
   render() {
+    console.log()
     return (
       <div>
         <header className="site-header">
@@ -63,19 +44,12 @@ class App extends Component {
         <div className="nav-bar-sep d-lg-none" />
         <div className="outer-container home-page">
           <div className="container-fluid">
-            <div className="row" style={{ marginLeft: 70 }}>
+            <div className="row" style={window.innerWidth>990?{ marginLeft: 70 }:{}}>
               <PoseGroup>
                 {this.state.items.map(x => (
-                  <ItemLi
-                    key={x}
-                    style={{
-                      listStyle: "none",
-                      width: widthHeight.width,
-                      height: widthHeight.height
-                    }}
-                  >
-                    <Item />
-                  </ItemLi>
+             
+                    <Item
+                  key={x} />
                 ))}
               </PoseGroup>
             </div>
@@ -121,14 +95,7 @@ class Item extends Component {
           <figure>
             <Box pose={this.state.isVisible ? "visible" : "hidden"}>
               {this.state.Id !== 0 ? (
-                <img
-                  src={imgSource}
-                  alt={imgSource}
-                  style={{
-                    width: widthHeight.width,
-                    height: widthHeight.height
-                  }}
-                />
+                <img src={imgSource} alt={imgSource} />
               ) : (
                 <div />
               )}
@@ -136,10 +103,6 @@ class Item extends Component {
           </figure>
           <div
             className="entry-content flex flex-column align-items-center justify-content-center"
-            style={{
-              width: widthHeight.width,
-              height: widthHeight.height
-            }}
           >
             <h3>
               <a href={imgSource}>#{this.state.Id}</a>
