@@ -1,0 +1,11 @@
+D:\github\picsumWebMobilApi\server\datacollector\bin\Debug\netcoreapp2.1\datacollector.deps.json
+D:\github\picsumWebMobilApi\server\datacollector\bin\Debug\netcoreapp2.1\datacollector.runtimeconfig.json
+D:\github\picsumWebMobilApi\server\datacollector\bin\Debug\netcoreapp2.1\datacollector.runtimeconfig.dev.json
+D:\github\picsumWebMobilApi\server\datacollector\bin\Debug\netcoreapp2.1\datacollector.dll
+D:\github\picsumWebMobilApi\server\datacollector\bin\Debug\netcoreapp2.1\datacollector.pdb
+D:\github\picsumWebMobilApi\server\datacollector\obj\Debug\netcoreapp2.1\datacollector.csprojAssemblyReference.cache
+D:\github\picsumWebMobilApi\server\datacollector\obj\Debug\netcoreapp2.1\datacollector.csproj.CoreCompileInputs.cache
+D:\github\picsumWebMobilApi\server\datacollector\obj\Debug\netcoreapp2.1\datacollector.AssemblyInfoInputs.cache
+D:\github\picsumWebMobilApi\server\datacollector\obj\Debug\netcoreapp2.1\datacollector.AssemblyInfo.cs
+D:\github\picsumWebMobilApi\server\datacollector\obj\Debug\netcoreapp2.1\datacollector.dll
+D:\github\picsumWebMobilApi\server\datacollector\obj\Debug\netcoreapp2.1\datacollector.pdb

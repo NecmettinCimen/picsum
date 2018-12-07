@@ -1,0 +1,14 @@
+D:\github\picsumWebMobilApi\server\api\bin\Debug\netcoreapp2.1\api.deps.json
+D:\github\picsumWebMobilApi\server\api\bin\Debug\netcoreapp2.1\api.runtimeconfig.json
+D:\github\picsumWebMobilApi\server\api\bin\Debug\netcoreapp2.1\api.runtimeconfig.dev.json
+D:\github\picsumWebMobilApi\server\api\bin\Debug\netcoreapp2.1\api.dll
+D:\github\picsumWebMobilApi\server\api\bin\Debug\netcoreapp2.1\api.pdb
+D:\github\picsumWebMobilApi\server\api\obj\Debug\netcoreapp2.1\api.csprojAssemblyReference.cache
+D:\github\picsumWebMobilApi\server\api\obj\Debug\netcoreapp2.1\api.csproj.CoreCompileInputs.cache
+D:\github\picsumWebMobilApi\server\api\obj\Debug\netcoreapp2.1\api.RazorAssemblyInfo.cache
+D:\github\picsumWebMobilApi\server\api\obj\Debug\netcoreapp2.1\api.RazorAssemblyInfo.cs
+D:\github\picsumWebMobilApi\server\api\obj\Debug\netcoreapp2.1\api.AssemblyInfoInputs.cache
+D:\github\picsumWebMobilApi\server\api\obj\Debug\netcoreapp2.1\api.AssemblyInfo.cs
+D:\github\picsumWebMobilApi\server\api\obj\Debug\netcoreapp2.1\api.RazorTargetAssemblyInfo.cache
+D:\github\picsumWebMobilApi\server\api\obj\Debug\netcoreapp2.1\api.dll
+D:\github\picsumWebMobilApi\server\api\obj\Debug\netcoreapp2.1\api.pdb
