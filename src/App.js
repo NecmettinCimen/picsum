@@ -1,13 +1,24 @@
 import React, { Component } from "react";
 import posed, { PoseGroup } from "react-pose";
 import shuffle from "./shuffle";
+import { connect } from "react-redux";
+import { fetchList } from "./actions/picsumActions";
+
+import { push } from "react-router-redux";
 
 const Box = posed.div({
   hidden: { opacity: 0 },
   visible: { opacity: 1 }
 });
+
 class App extends Component {
-  state = { items: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] };
+  state = {
+    items: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    close: "",
+    branding: "",
+    sNavigation: "",
+    sHeader: ""
+  };
   componentDidMount() {
     setInterval(() => {
       this.setState({
@@ -15,20 +26,37 @@ class App extends Component {
       });
     }, 30000);
   }
+  componentWillMount() {
+    this.props.dispatch(push("/search"));
+  }
+  showNav() {
+    this.setState({
+      close: this.state.close === "" ? "close" : "",
+      branding: this.state.branding === "" ? "hide" : "",
+      sNavigation: this.state.sNavigation === "" ? "show" : "",
+      sHeader: this.state.sHeader === "" ? "no-shadow" : ""
+    });
+  }
   render() {
-    console.log()
+    const hamburger = "hamburger-menu " + this.state.close;
+    const branding = "site-branding d-none d-lg-block " + this.state.branding;
+    const siteNavigationClass =
+      "site-navigation flex flex-column justify-content-between " +
+      this.state.sNavigation;
+    const siteHeaderClass = "site-header" + this.state.sHeader;
+
     return (
       <div>
-        <header className="site-header">
+        <header className={siteHeaderClass}>
           <div className="site-branding">
             <h1 className="site-title">
-              <a href="index.html" rel="home">
+              <a rel="home">
                 <img src="images/logo.png" alt="Logo" />
               </a>
             </h1>
           </div>
           {/* .site-branding */}
-          <div className="hamburger-menu">
+          <div className={hamburger} onClick={this.showNav.bind(this)}>
             <div className="menu-icon">
               <img src="images/menu-icon.png" alt="menu icon" />
             </div>
@@ -41,15 +69,74 @@ class App extends Component {
           {/* .hamburger-menu */}
         </header>
         {/* .site-header */}
+        <nav className={siteNavigationClass}>
+          <div className={branding}>
+            <h1 className="site-title">
+              <a rel="home">
+                <img src="images/logo2.png" alt="Logo" />
+              </a>
+            </h1>
+          </div>
+          {/* .site-branding */}
+          <ul className="main-menu flex flex-column justify-content-center">
+            <li className="current-menu-item">
+              <a>Home</a>
+            </li>
+            <li>
+              <a href="portfolio.html">Portfolio</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a>About</a>
+            </li>
+            <li>
+              <a>Contact</a>
+            </li>
+          </ul>
+          <p>
+            Copyright © All rights reserved | This template is made with{" "}
+            <i className="fa fa-heart-o" aria-hidden="true" /> by{" "}
+            <a href="https://colorlib.com" target="_blank">
+              Colorlib
+            </a>
+          </p>
+          <div className="social-profiles">
+            <ul className="flex justify-content-start justify-content-lg-center align-items-center">
+              <li>
+                <a>
+                  <i className="fa fa-facebook" />
+                </a>
+              </li>
+              <li>
+                <a>
+                  <i className="fa fa-instagram" />
+                </a>
+              </li>
+              <li>
+                <a>
+                  <i className="fa fa-twitter" />
+                </a>
+              </li>
+              <li>
+                <a>
+                  <i className="fa fa-pinterest" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
         <div className="nav-bar-sep d-lg-none" />
         <div className="outer-container home-page">
           <div className="container-fluid">
-            <div className="row" style={window.innerWidth>990?{ marginLeft: 70 }:{}}>
+            <div
+              className="row"
+              style={window.innerWidth > 990 ? { marginLeft: 70 } : {}}
+            >
               <PoseGroup>
                 {this.state.items.map(x => (
-             
-                    <Item
-                  key={x} />
+                  <Item key={x} />
                 ))}
               </PoseGroup>
             </div>
@@ -101,9 +188,7 @@ class Item extends Component {
               )}
             </Box>
           </figure>
-          <div
-            className="entry-content flex flex-column align-items-center justify-content-center"
-          >
+          <div className="entry-content flex flex-column align-items-center justify-content-center">
             <h3>
               <a href={imgSource}>#{this.state.Id}</a>
             </h3>
@@ -114,4 +199,4 @@ class Item extends Component {
   }
 }
 
-export default App;
+export default connect()(App);
