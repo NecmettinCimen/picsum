@@ -106,7 +106,7 @@ https://reactjs.org/docs/create-a-new-react-app.html
    npm start
    ```
 
-### Publish & Release on Expo
+### Publish & Release
 
 1. Clone the repo
    ```sh
