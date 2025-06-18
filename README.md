@@ -1,4 +1,3 @@
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -13,7 +12,7 @@
   <h3 align="center">Picsum App React JS</h3>
 
   <p align="center">
-    Picsum App React JS
+    Picsum photo gallery - React application for placeholder images
     <br />
     <a href="https://github.com/necmettincimen/picsum"><strong>Explore the docs »</strong></a>
     <br />
@@ -60,7 +59,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Picsum App React JS
+Picsum photo gallery - React application for placeholder images
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
@@ -71,6 +70,8 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 | [![picsum](picsum.png)](picsum.png) |
 
 ### Built With
+
+**Technologies:** `react` `redux` `reactnavigation` `picsumapi` `githubpages`
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [React JS](https://reactjs.org/)
